@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Downloads - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="center" width="97%"><span class="STYLE3">Related Downloads</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE4" height="30">World of Warcraft Client</td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="60" style="padding: 10px;">
+                        <strong class="STYLE18">WoW 3.3.5a Client (WotLK)</strong><br>
+                        <span class="STYLE24">Required to play on Eternion-wow servers<br>
+                        Size: ~15GB<br>
+                        <a href="#" class="a2"><strong>Download via Torrent</strong></a> | 
+                        <a href="#" class="a2"><strong>Download Direct</strong></a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="60" style="padding: 10px;">
+                        <strong class="STYLE18">WoW 4.0.6 Client (Cataclysm)</strong><br>
+                        <span class="STYLE24">For Cataclysm realms (4.0.X)<br>
+                        Size: ~17GB<br>
+                        <a href="#" class="a2"><strong>Download via Torrent</strong></a> | 
+                        <a href="#" class="a2"><strong>Download Direct</strong></a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE4" height="30">Launchers & Tools</td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <strong class="STYLE18">Eternion-wow Launcher (Windows)</strong><br>
+                        <span class="STYLE24">Automatically updates realmlist and patches<br>
+                        <a href="#" class="a2"><strong>Download Launcher</strong></a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <strong class="STYLE18">Eternion-wow Launcher (Mac)</strong><br>
+                        <span class="STYLE24">Required for Mac users to connect to 4.0.X realms<br>
+                        <a href="#" class="a2"><strong>Download Mac Launcher</strong></a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <strong class="STYLE18">Realmlist Changer</strong><br>
+                        <span class="STYLE24">Quickly switch between different servers<br>
+                        <a href="#" class="a2"><strong>Download Tool</strong></a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE4" height="30">Addons</td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="40" style="padding: 10px;">
+                        <strong class="STYLE18">Eternion-wow Custom UI Pack</strong><br>
+                        <span class="STYLE24">Enhanced UI with custom features for Eternion-wow<br>
+                        <a href="#" class="a2"><strong>Download Addon Pack</strong></a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;After downloading the client, follow our <a href="{% url 'connect' %}" class="a2"><strong>connection guide</strong></a> to set up your realmlist.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Need help? Visit our <a href="#" class="a2"><strong>Forums</strong></a> or contact us!
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

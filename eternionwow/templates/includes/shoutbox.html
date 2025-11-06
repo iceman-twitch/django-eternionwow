@@ -1,0 +1,29 @@
+{% load static %}
+<!-- Shoutbox Section (Right Sidebar) -->
+<table cellspacing="0" cellpadding="0" width="210" border="0">
+    <tbody>
+    <tr>
+        <td align="center" height="29" style="background-image: url('{% static 'images/bx.jpg' %}'); background-repeat: no-repeat; background-position: center;"><strong>Shoutbox</strong></td>
+    </tr>
+    <tr>
+        <td valign="top" align="center">
+            <div style="height: 200px; overflow-y: scroll; width: 96%; padding: 5px;">
+                {% for message in shoutbox_messages %}
+                <div style="border-bottom: 1px solid #442911; padding: 3px;">
+                    <strong class="STYLE18">{{ message.username }}:</strong><br>
+                    <span class="STYLE24">{{ message.message }}</span><br>
+                    <small style="color: #666;">{{ message.timestamp|date:"M d, H:i" }}</small>
+                </div>
+                {% endfor %}
+            </div>
+            {% if user.is_authenticated %}
+            <form method="post" action="{% url 'shoutbox_post' %}" style="width: 96%; padding: 5px;">
+                {% csrf_token %}
+                <input type="text" name="message" placeholder="Type message..." style="width: 100%; padding: 3px; margin-bottom: 3px;">
+                <input type="submit" value="Shout" style="width: 100%; padding: 5px;">
+            </form>
+            {% endif %}
+        </td>
+    </tr>
+    </tbody>
+</table>

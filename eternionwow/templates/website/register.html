@@ -4,22 +4,22 @@
 {% block title %}Register - Eternion WoW{% endblock %}
 
 {% block content %}
-<table cellspacing="0" cellpadding="0" width="536" border="0">
+<table width="536" border="0" cellspacing="0" cellpadding="0">
     <tbody>
     <tr>
-        <td background="{% static 'images/bd.jpg' %}" height="29">
-            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <td height="29" style="background-image: url('{% static 'images/bd.jpg' %}'); background-repeat: no-repeat; background-position: center;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                 <tr>
                     <td width="3%">&nbsp;</td>
-                    <td align="left" width="97%"><span class="STYLE3">Create Account</span></td>
+                    <td width="97%" align="left"><span class="STYLE3">Account Registration</span></td>
                 </tr>
                 </tbody>
             </table>
         </td>
     </tr>
     <tr>
-        <td valign="top" align="center" style="padding: 20px;">
+        <td height="192" align="center" valign="top">
             {% if messages %}
                 {% for message in messages %}
                 <div style="padding: 10px; margin: 10px 0; background-color: {% if message.tags == 'success' %}#004400{% else %}#440000{% endif %}; border: 1px solid {% if message.tags == 'success' %}#00FF00{% else %}#FF0000{% endif %};">
@@ -28,48 +28,99 @@
                 {% endfor %}
             {% endif %}
             
-            <form method="post" style="width: 80%;">
+            <form method="post" name="reg">
                 {% csrf_token %}
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <table width="380" border="0" align="center">
                     <tbody>
                     <tr>
-                        <td height="40" class="STYLE24" align="right" width="40%">Username:</td>
-                        <td height="40" width="60%" style="padding-left: 10px;">
-                            <input type="text" name="username" required style="width: 90%; padding: 5px;" maxlength="16">
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <td align="right" class="STYLE11">Username: </td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">
+                            <input maxlength="16" size="30" name="username" required>
+                            *
                         </td>
                     </tr>
                     <tr>
-                        <td height="40" class="STYLE24" align="right">Password:</td>
-                        <td height="40" style="padding-left: 10px;">
-                            <input type="password" name="password" required style="width: 90%; padding: 5px;">
+                        <td align="right" class="STYLE11">Password: </td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">
+                            <input type="password" maxlength="16" size="30" name="password" required>
+                            *
                         </td>
                     </tr>
                     <tr>
-                        <td height="40" class="STYLE24" align="right">Confirm Password:</td>
-                        <td height="40" style="padding-left: 10px;">
-                            <input type="password" name="password2" required style="width: 90%; padding: 5px;">
+                        <td align="right" class="STYLE11">Retype Password: </td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">
+                            <input type="password" maxlength="16" size="30" name="password2" required>
+                            *
                         </td>
                     </tr>
                     <tr>
-                        <td height="40" class="STYLE24" align="right">Email:</td>
-                        <td height="40" style="padding-left: 10px;">
-                            <input type="email" name="email" required style="width: 90%; padding: 5px;">
+                        <td align="right" class="STYLE11">E-mail: </td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">
+                            <input maxlength="30" size="30" name="email" required>
+                            *
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td align="left" colspan="3" style="font-size:12px; color:#00CCFF;">
+                            please make sure your email do not contains illegal character such as" ##$%^&* "
+                            *
                         </td>
                     </tr>
                     <tr>
-                        <td height="40" colspan="2" align="center">
-                            <input type="submit" value="Create Account" style="padding: 10px 40px; font-size: 12px; cursor: pointer;">
+                        <td height="40" colspan="3" align="center">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="button" type="submit" value="Create Account">
                         </td>
                     </tr>
                     <tr>
-                        <td height="40" colspan="2" align="center" class="STYLE24">
-                            Already have an account? <a href="{% url 'login' %}" class="a2">Login here</a>
+                        <td height="40" colspan="3" align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="STYLE11">
+                                        <p>*Please protect your account and the registered email, do not share your accounts information with anyone.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="STYLE11">
+                                        <p>* If you forget your password, please check <a href="#" class="a2">here</a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="STYLE11">
+                                        *Realmlist list.eternion-wow.com Click <a href="{% url 'vote' %}" class="a2">here</a> to vote and earn in-game items! Accepted 3.2.X Sever Connection Guide.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="STYLE11">
+                                        <a href="{% url 'downloads' %}" class="a2">Server Connection Guide</a>.
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </td>
+                    </tr>
+                    <tr>
+                        <td height="40" colspan="3" align="center">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td height="40" colspan="3" align="center">&nbsp;</td>
                     </tr>
                     </tbody>
                 </table>
             </form>
         </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
     </tr>
     </tbody>
 </table>

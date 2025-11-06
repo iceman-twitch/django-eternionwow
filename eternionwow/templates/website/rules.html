@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Server Rules - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="center" width="97%"><span class="STYLE3">Server Rules</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Eternion-wow Game Rules for Players</p>
+                        <p>All players must follow these rules while playing on Eternion-wow.<br>
+                        ---------------------------------------------------------------------------------------<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;1. Any cheats, hacks, duping and exploits are strictly forbidden. Bug abusing for self-benefit is considered an exploit. If caught, you will recieve severe punishments (Minimum ban/Permanent ban). If you find a bug, report it to a GM/Admin by making a ticket or emailing it to the admin with enough information about it.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;2. Respect all players, Game Masters, and Admins. You've heard it before; treat others as you would like to be treated.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;3. Do not attack a flagged GM. The GM has their tag on for a reason; to do work. He/She does not need another player attacking them while they are doing their work. The punishment is the attacked-GM's discretion.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;4. Advertising ingame, Ventrilo or on the forums is a clear no-no. Your account/username will be instantly banned for a large sum of time.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;5. Officer chat is reserved only for English. No other language should be used in officer chat but English.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;6. Spamming officer chat is forbidden. Multiple offenses will lead to a ban. Keep the officer chat clean of spam.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;7. Swearing and capslock in officer chat is forbidden. No need for all caps in officer chat. And keep the chat clean of swearing.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;8. Racism of any kind in any chat is forbidden. There is severe punishments for racist comments (Account mute/ban).<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;9. Character names must be appropriate. When caught, you will be forced to change your name and may face a character ban for a period of time.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;10. Account sharing, trading, giving-away and selling is strictly forbidden. This is for your security. Sharing accounts puts your account in jeopardy and puts the GMs and Admins in a hasstle to resolve the avoidable issue. When caught, all accounts involved in the sharing/trading/giving-away/selling will be account banned for a period of time.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;11. Spawnkilling (Camping a spawn point where players port to or spawn at) is not allowed.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;12. Corpse-camping (Camping a player's corpse where they revive) is forbidden.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;13. Killing/Attacking a player who is attacking a boss is forbidden.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;14. Resetting a boss to full health to gain control of the loot is forbidden. This will result in severe punishments.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;15. Scamming or attempting to scam is forbidden. We will ask you to give back the item scammed for a less severe punishment. If you do not comply, you will recieve a severe punishment.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;16. Scripting is forbidden.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;17. Impersonating a GM or Admin is strictly forbidden. There is no reason for this. There will be no argument; you will be instantly banned for a duration at the GM's discretion.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;18. We expect you to be polite and mature ingame. Help out new players; give advice or point them in the right direction.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;19. Any of these rules have consequences if broken. The punishments are up to the Admin or GM enforcing.<br>
+                        <br>
+                        <em>Written by JaseHGM NHR</em>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p><strong class="STYLE3">By playing on Eternion-wow, you agree to follow these rules.</strong><br>
+                        <br>
+                        Rules are subject to change. Check this page regularly.<br>
+                        <br>
+                        <a href="{% url 'home' %}" class="a2"><strong>Back to Home</strong></a>
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

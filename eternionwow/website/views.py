@@ -135,3 +135,80 @@ def shoutbox_post(request):
         return JsonResponse({'success': False, 'error': 'Message cannot be empty.'})
     
     return JsonResponse({'success': False, 'error': 'Invalid request method.'})
+
+
+def vote_rewards(request):
+    """Vote rewards page"""
+    context = {}
+    
+    # Add user profile if authenticated
+    if request.user.is_authenticated:
+        try:
+            context['user_profile'] = request.user.wow_profile
+        except UserProfile.DoesNotExist:
+            context['user_profile'] = UserProfile.objects.create(user=request.user)
+    
+    return render(request, 'website/vote_rewards.html', context)
+
+
+def shopping(request):
+    """Shopping/Donation shop page"""
+    return render(request, 'website/shopping.html')
+
+
+def downloads(request):
+    """Downloads page"""
+    return render(request, 'website/downloads.html')
+
+
+def rules(request):
+    """Server rules page"""
+    return render(request, 'website/rules.html')
+
+
+def terms(request):
+    """Terms of use page"""
+    return render(request, 'website/terms.html')
+
+
+def faq(request):
+    """FAQ page"""
+    return render(request, 'website/faq.html')
+
+
+def forums(request):
+    """Forums page"""
+    return render(request, 'website/forums.html')
+
+
+def contact(request):
+    """Contact page"""
+    if request.method == 'POST':
+        # Get form data
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        account = request.POST.get('account', '').strip()
+        subject = request.POST.get('subject', '').strip()
+        message = request.POST.get('message', '').strip()
+        
+        # Validate
+        if not all([name, email, subject, message]):
+            messages.error(request, 'Please fill in all required fields.')
+            return render(request, 'website/contact.html')
+        
+        # Here you would normally send an email or save to database
+        # For now, just show a success message
+        messages.success(request, 'Thank you for contacting us! We will respond within 24-48 hours.')
+        
+        # You can add email sending logic here:
+        # from django.core.mail import send_mail
+        # send_mail(
+        #     subject=f'Contact Form: {subject}',
+        #     message=f'From: {name} ({email})\nAccount: {account}\n\n{message}',
+        #     from_email=email,
+        #     recipient_list=['support@eternion-wow.com'],
+        # )
+        
+        return redirect('contact')
+    
+    return render(request, 'website/contact.html')

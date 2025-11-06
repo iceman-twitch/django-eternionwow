@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Vote Rewards - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="center" width="97%"><span class="STYLE3">Vote Rewards</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                {% if user.is_authenticated %}
+                <tr>
+                    <td class="STYLE4" height="30">Your Vote Points</td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="40" style="padding: 10px;">
+                        <span class="STYLE24">Username: <strong class="STYLE18">{{ user.username }}</strong></span><br>
+                        <span class="STYLE24">Current Vote Points: <strong class="STYLE18" style="font-size: 16px;">{{ user.userprofile.vote_points }}</strong></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td class="STYLE4" height="30">Available Rewards</td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong class="STYLE18">5 Vote Points</strong> - Rare Mount<br>
+                        <span class="STYLE24" style="padding-left: 25px;">Get a rare epic mount to show off your support!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong class="STYLE18">10 Vote Points</strong> - Epic Pet<br>
+                        <span class="STYLE24" style="padding-left: 25px;">Unique companion pet that follows you everywhere!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong class="STYLE18">15 Vote Points</strong> - Special Item<br>
+                        <span class="STYLE24" style="padding-left: 25px;">Exclusive items not available anywhere else!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong class="STYLE18">20 Vote Points</strong> - Gold Package<br>
+                        <span class="STYLE24" style="padding-left: 25px;">10,000 gold delivered to your character!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong class="STYLE18">25 Vote Points</strong> - Legendary Mount<br>
+                        <span class="STYLE24" style="padding-left: 25px;">Ultra-rare legendary mount with unique effects!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong class="STYLE18">50 Vote Points</strong> - Ultimate Reward Package<br>
+                        <span class="STYLE24" style="padding-left: 25px;">Complete package with mounts, pets, items, and gold!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE4" height="30">How to Claim Rewards</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" style="padding: 10px;">
+                        <p><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;1. Accumulate vote points by voting on our listing sites<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;2. Contact a GM in-game via ticket or whisper<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;3. Tell them which reward you want to claim<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;4. Your vote points will be deducted and reward delivered instantly!<br>
+                        <br>
+                        <a href="{% url 'vote' %}" class="a2"><strong>Click here to vote now!</strong></a>
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

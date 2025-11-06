@@ -1,0 +1,31 @@
+{% load static %}
+<!-- Server Status Section (Right Sidebar) -->
+<table cellspacing="0" cellpadding="0" width="210" border="0">
+    <tbody>
+    <tr>
+        <td align="center" height="29" style="background-image: url('{% static 'images/bx.jpg' %}'); background-repeat: no-repeat; background-position: center;"><strong>Server Status</strong></td>
+    </tr>
+    <tr>
+        <td valign="top" align="center">
+            <table width="96%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                {% for realm in realms %}
+                <tr>
+                    <td height="25" class="line_hen">
+                        <strong>{{ realm.name }}</strong><br>
+                        Realmlist: <span class="STYLE21">{{ realm.realmlist }}</span><br>
+                        Status: {% if realm.is_online %}<span style="color: #00FF00;">Online</span>{% else %}<span style="color: #FF0000;">Offline</span>{% endif %}<br>
+                        Players: {{ realm.players_online }}/{{ realm.max_players }}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td height="25" class="line_hen">No realms available</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>

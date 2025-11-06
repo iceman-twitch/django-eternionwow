@@ -1,0 +1,52 @@
+{% load static %}
+<!-- Left Sidebar Menu -->
+<table cellspacing="0" cellpadding="0" width="190" border="0">
+    <tbody>
+    <tr>
+        <td align="center" height="29" style="background-image: url('{% static 'images/bx.jpg' %}'); background-repeat: no-repeat; background-position: center;"><strong>Menu</strong></td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" height="122">
+            <table width="96%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'home' %}" class="a1">Home</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'register' %}" class="a1">Register</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'vote' %}" class="a1">Vote Page</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'vote_rewards' %}" class="a1">Vote Rewards</a></td>
+                </tr>
+                {% if user.is_authenticated %} 
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'shopping' %}" class="a1">Shopping</a></td>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'downloads' %}" class="a1">Related Downloads</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'rules' %}" class="a1">Server Rules</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'terms' %}" class="a1">Terms of use</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'faq' %}" class="a1">F.A.Q</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'forums' %}" class="a1">Forums</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'contact' %}" class="a1">Contact Us</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>

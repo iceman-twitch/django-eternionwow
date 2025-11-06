@@ -1,0 +1,91 @@
+{% load static %}
+<!-- Login/Account Panel (Right Sidebar) -->
+{% if user.is_authenticated %}
+<table cellspacing="0" cellpadding="0" width="210" border="0">
+    <tbody>
+    <tr>
+        <td align="center" height="29" style="background-image: url('{% static 'images/bx.jpg' %}'); background-repeat: no-repeat; background-position: center;">
+            <span class="STYLE3">Account Panel</span>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center">
+            <table width="96%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td height="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" align="left">
+                        <strong>Username:</strong> {{ user.username }}<br>
+                        <strong>Rank:</strong> {{ user.userprofile.site_rank }}<br>
+                        <strong>Vote Points:</strong> {{ user.userprofile.vote_points }}<br>
+                        <strong>Donation Points:</strong> {{ user.userprofile.donation_points }}
+                    </td>
+                </tr>
+                <tr>
+                    <td height="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'account' %}" class="a2">My Account</a></td>
+                </tr>
+                <tr>
+                    <td height="25" class="line_hen"><a href="{% url 'logout' %}" class="a2">Logout</a></td>
+                </tr>
+                <tr>
+                    <td height="10">&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% else %}
+<table cellspacing="0" cellpadding="0" width="210" border="0">
+    <tbody>
+    <tr>
+        <td align="center" height="29" style="background-image: url('{% static 'images/bx.jpg' %}'); background-repeat: no-repeat; background-position: center;">
+            <span class="STYLE3">Login</span>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center">
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <table width="96%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <tr>
+                        <td height="10">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td height="30" class="STYLE11" align="center">
+                            <input type="text" name="username" placeholder="Username" style="width: 95%; padding: 5px; background-color: #2a2a2e; border: 1px solid #444; color: #fff;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30" class="STYLE11" align="center">
+                            <input type="password" name="password" placeholder="Password" style="width: 95%; padding: 5px; background-color: #2a2a2e; border: 1px solid #444; color: #fff;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="35" class="STYLE11" align="center">
+                            <input type="submit" value="Login" style="width: 95%; padding: 6px; background-color: #442911; border: 1px solid #6b6b7a; color: #00CCFF; cursor: pointer; font-weight: bold;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="25" class="line_hen" align="center">
+                            <a href="{% url 'register' %}" class="a2">Create Account</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="10">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endif %}

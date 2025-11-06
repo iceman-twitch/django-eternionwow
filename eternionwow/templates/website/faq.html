@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}F.A.Q - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="center" width="97%"><span class="STYLE3">Frequently Asked Questions</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">General Questions</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Is Eternion-wow free to play?</strong><br>
+                        <strong>A:</strong> Yes! Eternion-wow is completely FREE. All content is accessible without paying. Donations are optional and support server costs.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: What expansions do you support?</strong><br>
+                        <strong>A:</strong> We currently support WotLK (3.3.5a) and Cataclysm (4.0.6) content across multiple realms. See our <a href="{% url 'home' %}" class="a2">Realm Information</a> for details.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: How many accounts can I have?</strong><br>
+                        <strong>A:</strong> Players are limited to ONE account unless given special permission by administration. Multiple accounts may result in ban.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Can I transfer my character from another server?</strong><br>
+                        <strong>A:</strong> Character transfers are not currently supported. You must start fresh on Eternion-wow.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Getting Started</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: How do I start playing?</strong><br>
+                        <strong>A:</strong> Follow these steps:<br>
+                        1. <a href="{% url 'register' %}" class="a2">Register an account</a><br>
+                        2. Download the appropriate WoW client from our <a href="{% url 'downloads' %}" class="a2">Downloads page</a><br>
+                        3. Change your realmlist (instructions on <a href="{% url 'connect' %}" class="a2">Connect page</a>)<br>
+                        4. Login and create your character!
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: What is a realmlist?</strong><br>
+                        <strong>A:</strong> The realmlist tells your WoW client which server to connect to. You must change it to point to Eternion-wow. See our <a href="{% url 'connect' %}" class="a2">Connect Guide</a>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: I can't connect to the server. What should I do?</strong><br>
+                        <strong>A:</strong> Check these common issues:<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Verify your realmlist.wtf file is correct<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Make sure you're using the correct WoW client version<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Check if the realm is online (see homepage status)<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Disable firewall/antivirus temporarily<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Try flushing DNS: <code>ipconfig /flushdns</code>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Account Issues</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: I forgot my password. How do I reset it?</strong><br>
+                        <strong>A:</strong> Use the "Retrieve Password" feature in the Account Tools section (left sidebar when logged in) or contact us via <a href="{% url 'contact' %}" class="a2">Contact page</a>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: My character is stuck. What can I do?</strong><br>
+                        <strong>A:</strong> Use the "Unstuck Character" feature in Account Tools (requires login). This will teleport your character to a safe location.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Can I change my account email?</strong><br>
+                        <strong>A:</strong> Yes, contact a GM via ticket in-game or use our <a href="{% url 'contact' %}" class="a2">Contact page</a> for email changes.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Gameplay</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: What are the XP rates?</strong><br>
+                        <strong>A:</strong> XP rates vary by realm:<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Eternion80 3.3.x: x5 rates<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Apocalypse Fun 3.3.x: x255 instant rates<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Deathwing 4.0.X: x10 rates<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Hellscream Cataclysm 4.0.X: x15 rates
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Are cross-faction interactions allowed?</strong><br>
+                        <strong>A:</strong> Cross-faction chat, mail, and grouping are disabled on PvP realms to maintain faction balance. PvE realms may have cross-faction features enabled.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Do you have working raids and dungeons?</strong><br>
+                        <strong>A:</strong> Yes! All major raids and dungeons are scripted and working. Some minor bugs may exist - report them via ticket.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Voting & Donations</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: How does voting work?</strong><br>
+                        <strong>A:</strong> Vote for Eternion-wow on server listing sites to earn Vote Points. Redeem points for rewards on our <a href="{% url 'vote_rewards' %}" class="a2">Vote Rewards page</a>. You can vote every 12 hours.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Are donations required to play?</strong><br>
+                        <strong>A:</strong> No! All content is accessible for free. Donations are optional and help keep the server running. Donors receive cosmetic items and convenience features.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Can I get a refund on my donation?</strong><br>
+                        <strong>A:</strong> No. All donations are final and non-refundable. See our <a href="{% url 'terms' %}" class="a2">Terms of Use</a> for details.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Technical Support</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: My game crashes frequently. What can I do?</strong><br>
+                        <strong>A:</strong> Try these solutions:<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Update your graphics drivers<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Lower in-game graphics settings<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Disable addons temporarily<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Delete Cache, WDB, and WTF folders (backup first!)<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Run WoW.exe as administrator
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><strong class="STYLE18">Q: Where can I get help if my question isn't answered here?</strong><br>
+                        <strong>A:</strong> You can:<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Submit a ticket in-game (type .ticket in chat)<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Ask in our <a href="{% url 'forums' %}" class="a2">Forums</a><br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<a href="{% url 'contact' %}" class="a2">Contact Us</a> directly
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p><strong class="STYLE3">Still have questions?</strong><br>
+                        <br>
+                        <a href="{% url 'contact' %}" class="a2"><strong>Contact Support</strong></a> | <a href="{% url 'forums' %}" class="a2"><strong>Visit Forums</strong></a><br>
+                        <br>
+                        <a href="{% url 'home' %}" class="a2"><strong>Back to Home</strong></a>
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

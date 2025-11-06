@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="center" width="97%"><span class="STYLE3">Contact Us</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p class="STYLE4">Get in Touch</p>
+                        <p>Have questions, suggestions, or need support?<br>
+                        We're here to help! Choose your preferred contact method below.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Contact Methods</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="15" style="margin-top: 10px;">
+                            <tr style="background-color: #1a1410;">
+                                <td width="30%" valign="top"><strong class="STYLE18">In-Game Tickets</strong></td>
+                                <td width="70%">
+                                    <strong style="color: #00CCFF;">Fastest Response for Game Issues</strong><br>
+                                    Type in game chat: <span style="color: #00CCFF;">.ticket &lt;your message&gt;</span><br>
+                                    GMs typically respond within 1-24 hours<br>
+                                    <em>Best for: Character issues, stuck characters, bug reports, game questions</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><strong class="STYLE18">Email Support</strong></td>
+                                <td>
+                                    <strong style="color: #00CCFF;">support@eternion-wow.com</strong><br>
+                                    Response time: 24-48 hours<br>
+                                    <em>Best for: Account recovery, ban appeals, general inquiries</em>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #1a1410;">
+                                <td valign="top"><strong class="STYLE18">Admin Email</strong></td>
+                                <td>
+                                    <strong style="color: #00CCFF;">admin@eternion-wow.com</strong><br>
+                                    For administrative matters and serious issues<br>
+                                    <em>Best for: Staff applications, partnership inquiries, serious reports</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><strong class="STYLE18">Discord</strong></td>
+                                <td>
+                                    <strong style="color: #00CCFF;">discord.gg/eternionwow</strong><br>
+                                    Join our community for real-time chat<br>
+                                    <em>Best for: Community discussions, quick questions, announcements</em>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #1a1410;">
+                                <td valign="top"><strong class="STYLE18">Forums</strong></td>
+                                <td>
+                                    Visit our <a href="{% url 'forums' %}" class="a2">Community Forums</a><br>
+                                    Post questions and get help from community<br>
+                                    <em>Best for: Guides, suggestions, guild recruitment</em>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Contact Form</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <form method="post" action="{% url 'contact' %}" style="margin-top: 15px;">
+                            {% csrf_token %}
+                            <table width="100%" border="0" cellspacing="5" cellpadding="5">
+                                <tr>
+                                    <td width="25%" class="STYLE11"><strong>Your Name:</strong></td>
+                                    <td width="75%"><input type="text" name="name" class="textbox" style="width: 95%;" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="STYLE11"><strong>Email:</strong></td>
+                                    <td><input type="email" name="email" class="textbox" style="width: 95%;" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="STYLE11"><strong>Account Name:</strong></td>
+                                    <td><input type="text" name="account" class="textbox" style="width: 95%;" placeholder="Optional"></td>
+                                </tr>
+                                <tr>
+                                    <td class="STYLE11" valign="top"><strong>Subject:</strong></td>
+                                    <td>
+                                        <select name="subject" class="textbox" style="width: 95%;" required>
+                                            <option value="">-- Select a subject --</option>
+                                            <option value="Account Issue">Account Issue</option>
+                                            <option value="Technical Support">Technical Support</option>
+                                            <option value="Bug Report">Bug Report</option>
+                                            <option value="Ban Appeal">Ban Appeal</option>
+                                            <option value="Donation Issue">Donation Issue</option>
+                                            <option value="Suggestion">Suggestion</option>
+                                            <option value="Staff Application">Staff Application</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="STYLE11" valign="top"><strong>Message:</strong></td>
+                                    <td><textarea name="message" class="textbox" rows="8" style="width: 95%;" required></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <input type="submit" value="Send Message" class="button" style="padding: 8px 20px; background-color: #FF6600; color: white; border: none; cursor: pointer; font-weight: bold;">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                        {% if messages %}
+                        <div style="margin-top: 20px;">
+                            {% for message in messages %}
+                            <p style="color: {% if message.tags == 'success' %}#00FF00{% else %}#FF0000{% endif %}; font-weight: bold;">
+                                {{ message }}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Response Times</p>
+                        <p><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>In-Game Tickets:</strong> 1-24 hours (fastest)<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>Email Support:</strong> 24-48 hours<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>Contact Form:</strong> 48-72 hours<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>Discord:</strong> Variable (community driven)<br>
+                        <br>
+                        <strong style="color: #FF6600;">Note:</strong> Response times may be longer during weekends and holidays.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Before Contacting Support</p>
+                        <p>Please check these resources first:<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<a href="{% url 'faq' %}" class="a2">Frequently Asked Questions</a> - Common questions answered<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<a href="{% url 'connect' %}" class="a2">Connection Guide</a> - Help connecting to server<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<a href="{% url 'rules' %}" class="a2">Server Rules</a> - Read before ban appeals<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<a href="{% url 'forums' %}" class="a2">Community Forums</a> - Search existing discussions
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p><strong class="STYLE3">We're here to help!</strong><br>
+                        <br>
+                        <a href="{% url 'home' %}" class="a2"><strong>Back to Home</strong></a>
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

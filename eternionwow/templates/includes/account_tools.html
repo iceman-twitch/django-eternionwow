@@ -1,0 +1,37 @@
+{% load static %}
+<!-- Account Tools Section -->
+{% if user.is_authenticated %}
+<table cellspacing="0" cellpadding="0" width="190" border="0">
+    <tbody>
+    <tr>
+        <td class="STYLE3 STYLE4 STYLE6" align="center" height="29" style="background-image: url('{% static 'images/bx.jpg' %}'); background-repeat: no-repeat; background-position: center;"><strong>Account Tools</strong></td>
+    </tr>
+    <tr>
+        <td class="STYLE3 STYLE4 STYLE6" align="center" height="29">
+            <table cellspacing="0" cellpadding="0" width="96%" border="0">
+                <tbody>
+                <tr>
+                    <td class="line_hen" height="25"><a class="a2" href="{% url 'account' %}">Change Password</a></td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="25"><a class="a2" href="#">Unstuck Character</a></td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="25"><a class="a2" href="#">Retrieve Password</a></td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="25"><a class="a2" href="#">Ban Check Char</a></td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="25"><a class="a2" href="#">Ban Check Account</a></td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="25"><a class="a2" href="#">Ban Check IP</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endif %}

@@ -84,6 +84,7 @@ a.a3:active {
 	color: #FF6600;
 	font-weight: bold;
 	font-size: 12px;
+	padding-left: 10px;
 }
 .STYLE4 {
 	color: #FF6600;
@@ -102,6 +103,11 @@ a.a3:active {
 .STYLE17 {color: #FF0000}
 .STYLE18 {color: #FF6600; }
 .STYLE19 {font-size: 12px}
+/* Fix for background images - prevent repeating */
+td[background] {
+	background-repeat: repeat-x;
+	background-position: center;
+}
 .code{
 background-image: url(/web/20110710203153im_/http://www.eternion-wow.com/images/eternion-wow1_07.gif);
 background-color: #000000;

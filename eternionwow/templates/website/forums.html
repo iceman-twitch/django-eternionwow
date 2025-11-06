@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Forums - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="center" width="97%"><span class="STYLE3">Community Forums</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p class="STYLE4">Welcome to Eternion-wow Forums</p>
+                        <p><img src="{% static 'images/forums_icon.gif' %}" alt="Forums" style="margin: 20px 0;" onerror="this.style.display='none'"><br>
+                        <br>
+                        Our community forums are the heart of Eternion-wow.<br>
+                        Connect with other players, share strategies, report bugs, and stay updated!
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Forum Categories</p>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="10" style="margin-top: 10px;">
+                            <tr style="background-color: #1a1410;">
+                                <td width="40%"><strong class="STYLE18">Category</strong></td>
+                                <td width="60%"><strong class="STYLE18">Description</strong></td>
+                            </tr>
+                            <tr>
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Announcements</td>
+                                <td>Official server news and updates</td>
+                            </tr>
+                            <tr style="background-color: #1a1410;">
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;General Discussion</td>
+                                <td>General WoW and server talk</td>
+                            </tr>
+                            <tr>
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Class Discussion</td>
+                                <td>Class-specific guides and tips</td>
+                            </tr>
+                            <tr style="background-color: #1a1410;">
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;PvP Arena</td>
+                                <td>Arena strategies and discussions</td>
+                            </tr>
+                            <tr>
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Raid & Dungeons</td>
+                                <td>PvE tactics and guides</td>
+                            </tr>
+                            <tr style="background-color: #1a1410;">
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Guild Recruitment</td>
+                                <td>Find or advertise your guild</td>
+                            </tr>
+                            <tr>
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Bug Reports</td>
+                                <td>Report issues and bugs</td>
+                            </tr>
+                            <tr style="background-color: #1a1410;">
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Suggestions</td>
+                                <td>Share your ideas for improvements</td>
+                            </tr>
+                            <tr>
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Support</td>
+                                <td>Get help from community and staff</td>
+                            </tr>
+                            <tr style="background-color: #1a1410;">
+                                <td><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Off-Topic</td>
+                                <td>Non-WoW related discussions</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Forum Rules</p>
+                        <p><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Be respectful to all community members<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;No spam, advertising, or excessive bumping<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Keep discussions on-topic<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;No offensive language, racism, or hate speech<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Search before creating duplicate threads<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;Follow all <a href="{% url 'rules' %}" class="a2">Server Rules</a><br>
+                        <br>
+                        <strong style="color: #FF0000;">Violating forum rules may result in warning, temporary ban, or permanent ban.</strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p class="STYLE3" style="font-size: 18px; margin: 30px 0;">Forums Coming Soon!</p>
+                        <p>Our forum system is currently under development.<br>
+                        In the meantime, you can reach us through:<br>
+                        <br>
+                        <strong>In-Game Tickets:</strong> Type <span style="color: #00CCFF;">.ticket &lt;your message&gt;</span> in game chat<br>
+                        <strong>Shoutbox:</strong> Use the shoutbox on the right sidebar for quick messages<br>
+                        <strong>Email:</strong> Visit our <a href="{% url 'contact' %}" class="a2">Contact page</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p><!-- Forum integration can be added here -->
+                        <!-- Options: phpBB, SMF, Discourse, XenForo, or custom Django forum -->
+                        <!-- For now, showing placeholder message -->
+                        <br>
+                        <strong>Check back soon for our full forum launch!</strong><br>
+                        <br>
+                        <a href="{% url 'home' %}" class="a2"><strong>Back to Home</strong></a>
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}
