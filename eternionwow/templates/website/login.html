@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">Login to Account</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 40px;">
+            {% if messages %}
+                {% for message in messages %}
+                <div style="padding: 10px; margin: 10px 0; background: #440000; border: 1px solid #FF0000; color: #FFF;">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+            
+            <form method="post" style="width: 60%;">
+                {% csrf_token %}
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <tr>
+                        <td height="40" class="STYLE24" align="right" width="40%">Username:</td>
+                        <td height="40" width="60%" style="padding-left: 10px;">
+                            <input type="text" name="username" required style="width: 90%; padding: 5px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="40" class="STYLE24" align="right">Password:</td>
+                        <td height="40" style="padding-left: 10px;">
+                            <input type="password" name="password" required style="width: 90%; padding: 5px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="40" colspan="2" align="center">
+                            <input type="submit" value="Login" style="padding: 10px 40px; font-size: 12px; cursor: pointer;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="40" colspan="2" align="center" class="STYLE24">
+                            Don't have an account? <a href="{% url 'register' %}" class="a2">Register here</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

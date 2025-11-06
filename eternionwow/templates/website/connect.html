@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Connect - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">How to Connect</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Step 1: Create an Account</p>
+                        <p>If you don't have an account yet, <a href="{% url 'register' %}" class="a2"><strong>Register here</strong></a> to create one.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Step 2: Download the Client</p>
+                        <p>Download the World of Warcraft 3.3.5a client if you don't have it installed.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Step 3: Edit Realmlist</p>
+                        <p>Navigate to your World of Warcraft folder and open:<br>
+                        <strong class="STYLE18">Data\enUS\realmlist.wtf</strong> (or enGB/enEU depending on your client)<br>
+                        <br>
+                        Change the file content to:<br>
+                        <strong class="STYLE3">set realmlist list.eternion-wow.com</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p class="STYLE4">Step 4: Launch and Play!</p>
+                        <p>Start WoW using <strong>wow.exe</strong> (not the launcher)<br>
+                        Login with your registered account username and password<br>
+                        <br>
+                        <font color="#FF0000">Note: For 4.0.X Cataclysm realms, please use our custom launcher!</font>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11" align="center">
+                        <p><a href="#" class="a2" style="font-size: 14px;"><strong>Download Eternion-wow Launcher</strong></a><br>
+                        <br>
+                        <a href="#" class="a2"><strong>Download MAC Launcher</strong></a></p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

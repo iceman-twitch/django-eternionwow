@@ -1,0 +1,140 @@
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	line-height: 20px;
+}
+body {
+	background-color: #201A12;
+}
+.line_hen {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #442911;
+}
+a.a1 {
+	font-size: 11px;
+}
+a.a1:link {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.a1:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.a1:hover {
+	text-decoration: none;
+	color: #FFCC00;
+	font:bold;
+}
+a.a1:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.a2 {
+	font-size: 11px;
+}
+a.a2:link {
+	text-decoration: none;
+	color: #00CCFF;
+}
+a.a2:visited {
+	text-decoration: none;
+	color: #00CCFF;
+}
+a.a2:hover {
+	text-decoration: none;
+	color: #FF6600;
+}
+a.a2:active {
+	text-decoration: none;
+	color: #00CCFF;
+}
+a.a3 {
+	font-size: 16px;
+}
+a.a3:link {
+	text-decoration: none;
+	color: #FF0000;
+}
+a.a3:visited {
+	text-decoration: none;
+	color: #FF0000;
+}
+a.a3:hover {
+	text-decoration: none;
+	color: #FF6600;
+}
+a.a3:active {
+	text-decoration: none;
+	color: #FF0000;
+}
+.line_su {
+	border-left-width: 2px;
+	border-left-style: solid;
+	border-left-color: #442911;
+}
+.line_su1 {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #442911;
+}
+.STYLE3 {
+	color: #FF6600;
+	font-weight: bold;
+	font-size: 12px;
+}
+.STYLE4 {
+	color: #FF6600;
+	font-weight: bold;
+	font-size: 12px;
+}
+.STYLE5 {font-size: 14px}
+.STYLE6 {
+	font-size: 11px;
+	color: #FFFFFF;
+}
+.STYLE7 {color: #FFFFFF; font-size: 14px; }
+.STYLE10 {color: #FF0000; font-size: 14px; }
+.STYLE11 {color: #FFFFFF}
+.STYLE13 {font-size: 12px; }
+.STYLE17 {color: #FF0000}
+.STYLE18 {color: #FF6600; }
+.STYLE19 {font-size: 12px}
+.code{
+background-image: url(/web/20110710203153im_/http://www.eternion-wow.com/images/eternion-wow1_07.gif);
+background-color: #000000;
+font-family:Arial;
+font-style:italic;
+color:Red;
+border:0;
+padding:2px 3px;
+letter-spacing:3px;
+font-weight:bolder;
+}
+.unchanged {
+border:0;
+}
+
+
+/*
+     FILE ARCHIVED ON 20:31:53 Jul 10, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:59:17 Jul 12, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.679
+  exclusion.robots: 0.025
+  exclusion.robots.policy: 0.01
+  esindex: 0.015
+  cdx.remote: 6.365
+  LoadShardBlock: 69.955 (3)
+  PetaboxLoader3.datanode: 95.892 (4)
+  load_resource: 76.699
+  PetaboxLoader3.resolve: 40.146
+*/

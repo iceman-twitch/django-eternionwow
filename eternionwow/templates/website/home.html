@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Eternion WoW - Private Server - Home{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">How to connect to WOW Private Servers <img height="11" src="{% static 'images/news.gif' %}" width="28"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" height="192">
+            <table cellspacing="0" cellpadding="0" width="98%" border="0">
+                <tbody>
+                <tr>
+                    <td align="left">
+                        <p><span class="STYLE24">Steps:<br>
+                        1. Hit <a class="a2" href="{% url 'register' %}">Register</a> to create a new game account.<br>
+                        2. Download <a href="#" class="a2"><strong>Eternion-wow Launcher</strong></a> into your wow folder.</span><span class="STYLE24"><br>
+                        Or open your World of Warcraft\Data\enUS\ directory and edit your realmlist.wtf to read:<br>
+                        </span><strong class="STYLE3"><span>set realmlist list.eternion-wow.com</span></strong>
+                        <span class="STYLE24"><br>
+                        Note:for 4.0.X Cataclysm Realm use <br>
+                        <font color="#FF0000">Please use our launcher to login 4.0.X realms,or you can't play in-game.</font><br>
+                        <font color="#FF0000"><a href="#" class="a2">MAC Launcher</a></font><br>
+                        Click <a href="#" class="a2">here</a> to download MAC Launcher to play on 4.0.x Realms!<br>
+                        And then use the wow.exe (Not launcher.exe) to connect.<br>
+                        3.Login to play with your registered account. <br>
+                        We suggest you to use our launcher to login game, this will help you reduce some bugs.<br>
+                        * If you dont have WotLK in your PC, please click <a href="#" class="a2"><strong>Downloads</strong></a> to find the client download. <br>
+                        * If you want to get the newest pets and mounts in-game,please<strong> <a href="{% url 'vote' %}" class="a2">vote for Eternion-wow</a></strong>.<br>
+                        * Click <strong><a href="#" class="a2">here</a></strong> to contact with Eternion-wow Admin Team.</span><br>
+                        <span class="STYLE21">Click <a class="a3" href="{% url 'vote' %}">Vote</a> to Vote for Eternion-wow<br>
+                        Click <a class="a3" href="{% url 'vote' %}">Vote Rewards</a> to check your vote rewards . </span><br>
+                        <br>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="85%"><span class="STYLE3">Eternion-wow Private Servers Announcements</span></td>
+                    <td align="left" width="12%"><a class="a1" href="{% url 'home' %}">More &gt;&gt;</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center">
+            <table cellspacing="0" cellpadding="0" width="98%" border="0">
+                <tbody>
+                {% for news in news_list %}
+                <tr>
+                    <td class="line_hen" style="padding: 10px;">
+                        <p class="STYLE3">{{ news.title }}</p>
+                        <p class="STYLE24">
+                            <small style="color: #888;">{{ news.date|date:"F d, Y" }} by {{ news.author }}</small><br>
+                            {{ news.text|linebreaks }}
+                        </p>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="line_hen" style="padding: 10px;">
+                        <p class="STYLE24">No news available yet.</p>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">Shops</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" valign="top">
+            <table cellspacing="0" cellpadding="0" width="98%" align="center">
+                <tbody>
+                <tr>
+                    <td valign="top" class="STYLE11">
+                        <p>Eternion-wow is a absolutely free World of Warcraft private server.<br>
+                        But your payments will help this server run better. If you want to buy VIP sets and custome weapons/items, please click <a href="#" class="a2"><strong>Shopping</strong></a>.<br>
+                        <br>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">Vote For Eternion-wow Private Servers</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <table cellspacing="0" cellpadding="0" width="98%" align="center">
+                <tbody>
+                <tr>
+                    <td class="STYLE11">
+                        <p>Please vote for Eternion-wow.More players come to join eternion-wow family, more fun we will have.<br>
+                        <br>
+                        At the same time,we have updated our vote rewards in-game.When you have enough vote points, you can get the newest pets ,mounts and even quest items.<br>
+                        Each vote earn 1 vote point. You can vote 1 time in every 12 hours.<br>
+                        Please log out your character ingame and then vote for us with IE explore.<br>
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">Eternion-wow Private Server Rules</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" height="29">
+            <table cellspacing="0" cellpadding="0" width="98%" align="center">
+                <tbody>
+                <tr>
+                    <td class="STYLE11">
+                        <p><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;1. Do not use any kind of cheats, hacks or exploits. Using any bug in your advantage is considered exploit.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;2.Do not use bad language in any situation, channel or wisp.Or you will get banned.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;3.Insulting a GM results ban ip with no right to get unbanned.<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;4. Do not attack GM's in any situation. If you attacked a GM by mistake and you don't stop after he asks you, your character will get banned for the next 12 hours. Respect GM's /Admins, they are in game to help!<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;5.Spamming a Ticket with the same issue after you received an answer will result 12 hour ban on your character.<br>
+                        Check <a href="#" class="a2">here</a> to get more detail server rules.<br>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <td align="center" height="29">&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Account - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">Account Management</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE4" height="30">Account Information</td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="30">
+                        <span class="STYLE24">Username: <strong class="STYLE18">{{ user.username }}</strong></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="30">
+                        <span class="STYLE24">Email: <strong class="STYLE18">{{ user.email }}</strong></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="30">
+                        <span class="STYLE24">Site Rank: <strong class="STYLE18">{{ user.userprofile.site_rank }}</strong></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="30">
+                        <span class="STYLE24">Vote Points: <strong class="STYLE18">{{ user.userprofile.vote_points }}</strong></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="30">
+                        <span class="STYLE24">Donation Points: <strong class="STYLE18">{{ user.userprofile.donation_points }}</strong></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="30">
+                        <span class="STYLE24">Account Status: {% if user.userprofile.banned %}<strong style="color: #FF0000;">BANNED</strong>{% else %}<strong style="color: #00FF00;">Active</strong>{% endif %}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE4" height="30">Change Password</td>
+                </tr>
+                {% if messages %}
+                    {% for message in messages %}
+                    <tr>
+                        <td height="30">
+                            <div style="padding: 10px; background: {% if message.tags == 'success' %}#004400{% else %}#440000{% endif %}; border: 1px solid {% if message.tags == 'success' %}#00FF00{% else %}#FF0000{% endif %};">
+                                {{ message }}
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% endif %}
+                <tr>
+                    <td>
+                        <form method="post">
+                            {% csrf_token %}
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td height="40" class="STYLE24" align="right" width="40%">Current Password:</td>
+                                    <td height="40" width="60%" style="padding-left: 10px;">
+                                        <input type="password" name="old_password" required style="width: 80%; padding: 5px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" class="STYLE24" align="right">New Password:</td>
+                                    <td height="40" style="padding-left: 10px;">
+                                        <input type="password" name="new_password" required style="width: 80%; padding: 5px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" class="STYLE24" align="right">Confirm New Password:</td>
+                                    <td height="40" style="padding-left: 10px;">
+                                        <input type="password" name="new_password2" required style="width: 80%; padding: 5px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" colspan="2" align="center">
+                                        <input type="submit" value="Change Password" style="padding: 10px 30px; font-size: 12px; cursor: pointer;">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

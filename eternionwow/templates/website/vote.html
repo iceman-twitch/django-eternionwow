@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Vote - Eternion WoW{% endblock %}
+
+{% block content %}
+<table cellspacing="0" cellpadding="0" width="536" border="0">
+    <tbody>
+    <tr>
+        <td background="{% static 'images/bd.jpg' %}" height="29">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="3%">&nbsp;</td>
+                    <td align="left" width="97%"><span class="STYLE3">Vote for Eternion-wow</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="center" style="padding: 20px;">
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="STYLE11">
+                        <p>Please vote for Eternion-wow! More players come to join eternion-wow family, more fun we will have.<br>
+                        <br>
+                        When you have enough vote points, you can get the newest pets, mounts and even quest items in-game.<br>
+                        <br>
+                        Each vote earns <strong class="STYLE18">1 vote point</strong>. You can vote 1 time every 12 hours.<br>
+                        <br>
+                        {% if user.is_authenticated %}
+                        Your current vote points: <strong class="STYLE18">{{ user.userprofile.vote_points }}</strong>
+                        {% else %}
+                        Please <a href="{% url 'login' %}" class="a2">login</a> to see your vote points.
+                        {% endif %}
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE4" height="30">Vote Sites</td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <a href="https://www.xtremetop100.com/" target="_blank" class="a2">
+                            <img src="{% static 'images/vote.gif' %}" border="0" style="vertical-align: middle;">
+                            <strong>Vote on XtremeTop100</strong>
+                        </a>
+                        <br><span class="STYLE24">Vote for us on XtremeTop100 and earn rewards!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <a href="https://www.mmotop.eu/" target="_blank" class="a2">
+                            <img src="{% static 'images/vote.gif' %}" border="0" style="vertical-align: middle;">
+                            <strong>Vote on MMOTOP</strong>
+                        </a>
+                        <br><span class="STYLE24">Support us on MMOTOP rankings!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line_hen" height="50" style="padding: 10px;">
+                        <a href="https://www.top100arena.com/" target="_blank" class="a2">
+                            <img src="{% static 'images/vote.gif' %}" border="0" style="vertical-align: middle;">
+                            <strong>Vote on Top100Arena</strong>
+                        </a>
+                        <br><span class="STYLE24">Help us climb the Top100Arena rankings!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="STYLE4" height="30">Vote Rewards</td>
+                </tr>
+                <tr>
+                    <td class="STYLE11">
+                        <p><img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>5 Vote Points</strong> - Rare Mount<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>10 Vote Points</strong> - Epic Pet<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>15 Vote Points</strong> - Special Item<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>25 Vote Points</strong> - Legendary Mount<br>
+                        <img height="11" src="{% static 'images/square.gif' %}" width="11">&nbsp;<strong>50 Vote Points</strong> - Ultimate Reward Package<br>
+                        <br>
+                        Contact a GM in-game to claim your rewards!
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}
